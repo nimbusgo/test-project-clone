@@ -1,0 +1,59 @@
+name: functional_examples
+description: ''
+version: 0.0.1
+author: nimbus@prophecy.io
+language: scala
+buildSystem: maven
+pipelines:
+  pipelines/scd1_merge:
+    name: scd1_merge
+    description: ''
+    author: nimbus@prophecy.io
+    mode: batch
+    language: scala
+    createdAt: '2022-10-06 21:49:05'
+    datasets:
+      inputs:
+      - datasets/customers-raw
+      - datasets/customers-scd1
+      outputs:
+      - datasets/customers-scd1
+    dependencies: {}
+datasets:
+  datasets/customers-raw:
+    name: customers-raw
+    description: ''
+    author: nimbus@prophecy.io
+    createdAt: '2022-10-06 21:50:59'
+    physicalDatasets:
+      demos:
+        fabricId: 959
+        datasetType: File
+        description: ''
+        author: nimbus@prophecy.io
+        createdAt: '2022-10-06 21:50:59'
+  datasets/customers-scd1:
+    name: customers-scd1
+    description: ''
+    author: nimbus@prophecy.io
+    createdAt: '2022-10-06 22:11:05'
+    physicalDatasets:
+      demos:
+        fabricId: 959
+        datasetType: File
+        description: ''
+        author: nimbus@prophecy.io
+        createdAt: '2022-10-06 22:11:05'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs:
+  subgraphs/GenerateRandomIncrements:
+    name: GenerateRandomIncrements
+    description: ''
+    author: nimbus@prophecy.io
+    language: scala
+    createdAt: '2022-10-06 22:14:47'
+sqlModels: {}
+sqlPipeline: null
+dependencies: []
